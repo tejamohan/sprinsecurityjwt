@@ -79,6 +79,13 @@
 						</exclude>
 					</excludes>
 					<finalName>springsecurityjwt</finalName>
+					 <nonFilteredFileExtensions>
+            <nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+            <nonFilteredFileExtension>swf</nonFilteredFileExtension>
+             <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+             <nonFilteredFileExtension>zip</nonFilteredFileExtension>
+            <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+          </nonFilteredFileExtensions>
 				</configuration>
 			</plugin>
 			<plugin>
