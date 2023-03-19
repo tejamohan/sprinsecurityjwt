@@ -77,6 +77,10 @@
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
+						<exclude>
+						<artifactId>*</artifactId>
+						<groupId>com.amazonaws</groupId>
+						</exclude>
 					</excludes>
 					<finalName>springsecurityjwt</finalName>
 				</configuration>
