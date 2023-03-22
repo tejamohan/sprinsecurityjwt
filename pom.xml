@@ -62,25 +62,25 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		
+	
+	
 	</dependencies>
 
 	<build>
+	
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
 				<configuration>
+				
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
-						<exclude>
-						<artifactId>*</artifactId>
-						<groupId>com.amazonaws</groupId>
-						</exclude>
+						
 					</excludes>
 					<finalName>springsecurityjwt</finalName>
 				</configuration>
@@ -90,6 +90,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
             </plugin>
 		</plugins>
+		
 	</build>
 
 </project>
