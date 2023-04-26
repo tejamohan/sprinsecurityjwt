@@ -1,0 +1,60 @@
+---
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: sb-jwt-deployment
+
+  labels:
+
+    app: sb-jwt-deploymentpod
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: sb-jwt-deploymentpod
+
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: sb-jwt-deploymentpod
+
+
+    spec:
+
+      containers:
+
+      - name: sb-jwt-app
+
+        image: tejamunakala/sb-jwt-app
+
+        ports:
+
+        - containerPort: 5353
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: sb-jwt-app
+spec: 
+  type: NodePort
+  selector:
+   app: sb-jwt-deploymentpod
+  ports:
+    - name: app-port-mapping
+      protocol: TCP 
+      port: 5353
+      targetPort: 5353
+      nodePort: 30003
+...
